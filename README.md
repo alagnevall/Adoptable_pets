@@ -1,23 +1,23 @@
 # Adoptable Pets
 
 ## Team Pet Shop People
-Neal Tarver
-April Lagnevall
-Kathy Nguyen
-Travis Stowell
+Neal Tarver<br/>
+April Lagnevall<br/>
+Kathy Nguyen<br/>
+Travis Stowell<br/>
 
 
 ## Project Description
 Our project will look at adopatable pets in Kansas using data from an API from Petfinder.com.  
   
 ## Data sets
-Petfinder.com API:  https://www.petfinder.com/developers/v2/docs/
+Petfinder.com API:  https://www.petfinder.com/developers/v2/docs/ <br/>
 Zip Code/County Data: TBD
     
 ## Planned Viz's
-Heatmap of total adoptable pets by zip code/county
-Layered map (by species) with adoptable pet info plotted
-One More TBD
+Heatmap of total adoptable pets by zip code/county <br/>
+Layered map (by species) with adoptable pet info plotted <br/>
+One More TBD <br/r>
 
 ## Sketch of Design
 
