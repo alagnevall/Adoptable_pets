@@ -6,7 +6,6 @@ April Lagnevall<br/>
 Kathy Nguyen<br/>
 Travis Stowell<br/>
 
-
 ## Project Description
 Our project will look at adopatable pets in Kansas using data from an API from Petfinder.com.  
   
