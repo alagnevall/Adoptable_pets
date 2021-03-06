@@ -5,7 +5,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 
 #################################################
@@ -34,7 +34,7 @@ app = Flask(__name__)
 @app.route("/")
 def welcome():
     """List all available api routes."""
-    return render_template("index.html", mars=scrape)
+    return render_template("index.html")
     
 
 @app.route("/Adoption/1.0.2/animals")
@@ -51,3 +51,6 @@ def names():
     all_names = list(np.ravel(results))
 
     return jsonify(all_names)
+
+if __name__ == "__main__":
+    app.run(debug=True)
