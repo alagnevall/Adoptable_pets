@@ -1,3 +1,2 @@
-api_key = "KEY HERE"
-db_password = "PASSWORD HERE"
-db_username = "USERNAME HERE"
+password = "PASSWORD HERE"
+user = "USERNAME HERE"
