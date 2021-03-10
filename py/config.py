@@ -1,2 +1,2 @@
-password = "ADD PASSWORD"
-user = "ADD USERNAME"
+password = "Nevyn004"
+user = "postgres"
