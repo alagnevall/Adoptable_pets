@@ -46,6 +46,7 @@ def animals():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
+
     # Query all animals
     results = session.query(adoption)
 
