@@ -33,7 +33,7 @@ CREATE TABLE "adoptable_pets" (
 ); 
 
 CREATE TABLE postcodes (
-	"postcode" varchar,
+	"postcode" integer PRIMARY KEY,
 	"latitude" decimal(8,6),
 	"longitude" decimal(8,5)
 );
