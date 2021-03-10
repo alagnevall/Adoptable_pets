@@ -1,2 +1,2 @@
-password = "PASSWORD HERE"
-user = "USERNAME HERE"
+password = "ADD PASSWORD"
+user = "ADD USERNAME"
