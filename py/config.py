@@ -1,3 +1,3 @@
-api_key = "KEY HERE"
-db_password = "PASSWORD HERE"
-db_username = "USERNAME HERE"
+api_key = "K6iZvsZ6fHrscrHvlSjLvNcKqeIXCBmyRJbbT0OkHnWHldrDjly"
+db_password = "2653@Heart"
+db_username = "kcknguyen@gmail.com"
