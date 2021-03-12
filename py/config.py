@@ -1,3 +1,3 @@
-password = "PASSWORD"
-user = "USERNAME"
+password = "Jayhawk77"
+user = "postgres"
 
