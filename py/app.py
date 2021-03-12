@@ -3,10 +3,11 @@ import pandas as pd
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
+from sqlalchemy import create_engine, func, or_
 from config import user, password 
 from flask import Flask, jsonify, render_template, request, Response
 from flask_cors import CORS
+
 
 
 #################################################
@@ -51,29 +52,32 @@ def animals():
     # page = request.args.get('page', default = 1, type = int)
     status = request.args.get('status', default = '%', type = str)
     type = request.args.get('type', default = '%', type = str)
-    breeds = request.args.get('breeds', default = '%', type = str)
-    color = request.args.get('color', default = '%', type = str)
-    age = request.args.get('age', default = '%', type = str)
+    species = request.args.get('species', default = '%', type = str)
     gender = request.args.get('gender', default = '%', type = str)
+    breeds = request.args.get('breeds', default = '%', type = str)
+    age = request.args.get('age', default = '%', type = str)
     size = request.args.get('size', default = '%', type = str)
-    coat = request.args.get('coat', default = '%', type = str)
+    # color = request.args.get('color' ,default = "%" , type = str)
+    # coat = request.args.get('coat', default = '%', type = str)
     # limit = request.args.get('limit', default = 20, type = int)
     
 
-    # Create our session (link) from Python to the DB
+    # # Create our session (link) from Python to the DB
     session = Session(engine)
 
 
-    # Query all animals
-    results = session.query(adoption).filter(adoption.type.like(type)).\
-        filter(adoption.status.like(status)).\
-        filter(adoption.primary_breed.like(breeds)).\
-        filter(adoption.primary_color.like(color)).\
+    # # Query all animals
+    
+    results = session.query(adoption)\
+        .filter(adoption.type.like(type)).\
         filter(adoption.age.like(age)).\
         filter(adoption.gender.like(gender)).\
         filter(adoption.size.like(size)).\
-        filter(adoption.coat_length.like(coat)).\
-        filter(adoption.status.like(status))
+        filter(adoption.status.like(status)).\
+        filter(adoption.primary_breed.like(breeds)).\
+        filter(adoption.species.like(species))
+        # filter(adoption.primary_color.like(color)).\
+        # filter(adoption.coat_length.like(coat)).\
         # paginate(page = page, per_page = limit)
 
 
