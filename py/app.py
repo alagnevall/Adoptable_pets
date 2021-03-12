@@ -43,12 +43,25 @@ def API_doc():
 
 @app.route("/Adoption/1.0.2/animals")
 def animals():
+    #Create filtering for parameters
+    page = request.args.get('page', default = 1, type = int)
+    status = request.args.get('status', default = '*', type = str)
+    type = request.args.get('type', default = '%', type = str)
+    breeds = request.args.get('breeds', default = '*', type = str)
+    color = request.args.get('color', default = '*', type = str)
+    age = request.args.get('age', default = '*', type = str)
+    gender = request.args.get('gender', default = '*', type = str)
+    size = request.args.get('size', default = '*', type = str)
+    coat = request.args.get('coat', default = '*', type = str)
+    contact = request.args.get('contact', default = '*', type = str)
+
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
 
     # Query all animals
-    results = session.query(adoption)
+    results = session.query(adoption).filter(adoption.species.like(type))
+
 
     data = pd.read_sql(results.statement, engine)
     petdata = data.to_dict(orient="records")
