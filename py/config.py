@@ -1,3 +1,3 @@
-password = ""
-user = ""
+password = "PASSWORD"
+user = "USERNAME"
 

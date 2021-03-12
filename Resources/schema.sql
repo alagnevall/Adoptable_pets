@@ -23,6 +23,7 @@ CREATE TABLE "adoptable_pets" (
 	"good_with_children" varchar,
 	"good_with_dogs" varchar,
 	"species" varchar,
+	"type" varchar,
 	"photo" varchar,
 	"address" varchar,
 	"city" varchar,
@@ -30,7 +31,7 @@ CREATE TABLE "adoptable_pets" (
 	"postcode" varchar,
 	"country" varchar,
 	"status" varchar
-); 
+);
 
 CREATE TABLE postcodes (
 	"postcode" integer PRIMARY KEY,
