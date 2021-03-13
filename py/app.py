@@ -75,7 +75,7 @@ def animals():
         filter(adoption.size.like(size)).\
         filter(adoption.status.like(status)).\
         filter(adoption.primary_breed.like(breeds)).\
-        filter(adoption.species.like(species))
+        filter(adoption.species.like(species)).limit(10)
         # filter(adoption.primary_color.like(color)).\
         # filter(adoption.coat_length.like(coat)).\
         # paginate(page = page, per_page = limit)
