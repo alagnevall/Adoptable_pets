@@ -61,6 +61,7 @@ let markers;
       let photos = response[i].photo;
       let petname = response[i].name;
       let species = response[i].species; 
+      let petGender = response[i].gender;
       if (photos !="none"){
         photoData.push(photos)
       }  
@@ -69,7 +70,7 @@ let markers;
       if (location) {
         d3.json(`http://www.mapquestapi.com/geocoding/v1/address?key=${mq_key}&location=${location} ${city} ${state}`, function(address){
           markers.addLayer(L.marker([address.results[0].locations[0].latLng.lat, address.results[0].locations[0].latLng.lng])
-            .bindPopup(petname));
+            .bindPopup(`<h6>Name: ${petname}</h6>${petGender} ${species}<hr> City: ${city}`));
 
         })
         
