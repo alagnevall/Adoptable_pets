@@ -14,6 +14,7 @@ var myMap = L.map("map", {
     id: "mapbox/streets-v11",
     accessToken: api_key
   }).addTo(myMap);
+  let markers;
 
 let selection = "%" 
 let animalSelector = d3.select("div.dropdown-menu")
@@ -21,10 +22,11 @@ let animalSelector = d3.select("div.dropdown-menu")
   .on("click", function(event){
     console.log(d3.select(this).attr("value"))
      selection =d3.select(this).attr("value");
+     myMap.removeLayer(markers);
+     
      updatePage();
   })
 
-let markers;
 
   // Store API query variables
   let baseURL = "http://localhost:5000/Adoption/1.0.2/animals?";
@@ -48,7 +50,7 @@ let markers;
     if (markers){
       
       console.log(markers)
-      myMap.removeLayer(markers);
+     
 
     }  
     // Loop through data
