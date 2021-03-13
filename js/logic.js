@@ -12,10 +12,11 @@ var myMap = L.map("map", {
     zoomOffset: -1,
     id: "mapbox/streets-v11",
     accessToken: api_key
-  }).addTo(myMap);
-
+  })
+  .addTo(myMap);
+ console.log("I am a map")
   
-  // Assemble API query URL
+  Assemble API query URL
   var url = "http://localhost:5000/Adoption/1.0.2/animals"
   
   // Grab the data with d3
@@ -41,6 +42,6 @@ var myMap = L.map("map", {
     }
   
     // Add our marker cluster layer to the map
-    myMap.addLayer(markers);
+    myMap.addLayer(markers).addTo(myMap);
   
   });
