@@ -19,10 +19,15 @@
     <!-- Marker Cluster CSS -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+
 	<script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=Qv7q9plHkXxcUsAQz6EwSAzOlqvpbbiH"></script>
     <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-geocoding.js?key=Qv7q9plHkXxcUsAQz6EwSAzOlqvpbbiH"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
 
   </head>
   <body>
@@ -55,24 +60,54 @@
         </ul>
       </div>
     </nav>
-
-<div class="container pt-5">
-  <div class="row gx-5">
-
-    <div id="carouselSlideshow" class="carousel slide mx-auto" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <!-- <img class="d-block"  alt="First slide"> -->
+    
+    <div class="container-fluid pt-5">
+      <div class="row gx-5">
+        <div class="col-lg-10">
+          
+          
+          <div class="row gx-5">
+            <div class="col-lg-6">
+              <div id="plot"></div>
+            </div>
+            <div class="col-lg-6">
+              <div id="pie"></div>
+            </div>
+          </div>
+          <div class="row gx-5">
+            <div class="col-lg-12 mapbox">
+              <div class="row gx-5 g-30">
+                <div></div>
+              </div>
+              <h3 class="text-center">Mapped adoptable pets</h3><br/>
+              <div id="map"  width=77% ></div>
+            </div>
+          </div>
         </div>
-       </div>
+          <div class="col-lg-2">
+            <div class="row gx-5">
+              <div id="carouselSlideshow" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <!-- <img class="d-block"  alt="First slide"> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row gx-5 align-items-center">
+              <br/>
+              <div class="text-wrap">According to the ASPCA, approximately 6.5 million companion animals enter U.S. 
+                animal shelters nationwide every year. Of those, approximately 3.3 million are dogs and 3.2 million are cats.
+                But there are many types of pets to be adopted</div>
+                <br/><br/><br/><br/><br/><br/><hr><hr/>
+                <div class="text-wrap">Pet Shop Peoples Dashboard, makes it easy for you to locate a new family member by filtering
+                  by type of animal.  Explore what is available in your area with our interactive map. 
+                </div>
+            </div>
+          </div>
+      </div>
     </div>
-  </div>
-  <div class="row gx-5">
-    <div class="col-lg-8 mapbox">
-      <h1>Adoptable Pets</h1><br/>
-      <div id="map"  width=77% ></div>
-    </div>
-
+            
 
     <!-- Leaflet JS -->
     <!-- d3 JS -->
@@ -88,5 +123,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/TravisLogic.js"></script>
   </body>
 </html>
