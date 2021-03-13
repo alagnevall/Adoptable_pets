@@ -24,7 +24,7 @@ let animalSelector = d3.select("div.dropdown-menu")
      updatePage();
   })
 
-
+let markers;
 
   // Store API query variables
   let baseURL = "http://localhost:5000/Adoption/1.0.2/animals?";
@@ -36,18 +36,21 @@ let animalSelector = d3.select("div.dropdown-menu")
     let url = baseURL + "type=" + selection;
     console.log(url)
     d3.json(url, function(response) {
-  
-    // Create a new marker cluster group
-    let markers = L.markerClusterGroup();
-    let photoData = []
-    // let petMarker = []
-    // myMap.removeLayer(markers);
+      
+      // Create a new marker cluster group
+      let photoData = []
+      // let petMarker = []
+      markers = L.markerClusterGroup();
+    
     var clearPhotoData = d3.select("div.carousel-inner");
     clearPhotoData.selectAll("div").remove()
     
+    if (markers){
+      myMap.removeLayer(markers);
+    }  
     // Loop through data
     for (var i = 0; i < response.length; i++) {
-     
+      
       // Set the data location property to a variable
       var location = response[i].address;
       var city = response[i].city;
@@ -63,7 +66,7 @@ let animalSelector = d3.select("div.dropdown-menu")
       if (location) {
         d3.json(`http://www.mapquestapi.com/geocoding/v1/address?key=${mq_key}&location=${location} ${city} ${state}`, function(address){
           markers.addLayer(L.marker([address.results[0].locations[0].latLng.lat, address.results[0].locations[0].latLng.lng])
-          .bindPopup(petname));
+            .bindPopup(petname));
         })
         
         // Add a new marker to the cluster group and bind a pop-up
@@ -83,7 +86,7 @@ let animalSelector = d3.select("div.dropdown-menu")
     .append("img")
     .attr("class", "d-block mx-auto")
     .attr("src", function(d){return d;})
-    .attr("width", 200);
+    .attr("width", "100%");
     // .attr("height", 50)
 
     d3.select("div.carousel-item")
