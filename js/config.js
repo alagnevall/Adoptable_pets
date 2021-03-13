@@ -1,1 +1,1 @@
-api_key = "KEY HERE"
+api_key = "pk.eyJ1IjoidHJhdmlzc3Rvd2VsbCIsImEiOiJja200OXk3MXcwMmpkMnBtc3I0ODBtYXNjIn0.gXuavz9iCNbGiee01lQs4w"
