@@ -26,6 +26,9 @@ One More TBD <br/r>
 
 [Git Hub Repository](https://github.com/alagnevall/Adoptable_pets)
 
-
+## Heroku Deployment
+You can find our deployed app here:
+[Dashboard](https://petshoppeopleweb.herokuapp.com/)
+[API](https://petshoppeople.herokuapp.com/)
 
 
