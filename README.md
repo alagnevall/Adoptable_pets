@@ -28,7 +28,7 @@ One More TBD <br/r>
 
 ## Heroku Deployment
 You can find our deployed app here:
-[Dashboard](https://petshoppeopleweb.herokuapp.com/)/
+[Dashboard](https://petshoppeopleweb.herokuapp.com/) |
 [API](https://petshoppeople.herokuapp.com/)
 
 
